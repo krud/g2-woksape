@@ -1,11 +1,3 @@
-//
-//  SceneDelegate.swift
-//  g2-woksape
-//
-//  Created by Kelly Rudnicki on 3/20/20.
-//  Copyright © 2020 Kelly Rudnicki. All rights reserved.
-//
-
 import UIKit
 import SwiftUI
 

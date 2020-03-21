@@ -13,6 +13,10 @@
 		A2A0446C24258F3C006BF12E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2A0446B24258F3C006BF12E /* Assets.xcassets */; };
 		A2A0446F24258F3C006BF12E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2A0446E24258F3C006BF12E /* Preview Assets.xcassets */; };
 		A2A0447224258F3C006BF12E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2A0447024258F3C006BF12E /* LaunchScreen.storyboard */; };
+		A2A0447B24258F8E006BF12E /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A0447A24258F8E006BF12E /* GameViewModel.swift */; };
+		A2A0447E242590EA006BF12E /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A0447D242590EA006BF12E /* Color.swift */; };
+		A2A0448124259172006BF12E /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A0448024259172006BF12E /* GameView.swift */; };
+		A2A04484242597A3006BF12E /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A04483242597A3006BF12E /* GameModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		A2A0446E24258F3C006BF12E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A2A0447124258F3C006BF12E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A2A0447324258F3C006BF12E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A2A0447A24258F8E006BF12E /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
+		A2A0447D242590EA006BF12E /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		A2A0448024259172006BF12E /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		A2A04483242597A3006BF12E /* GameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +66,10 @@
 			children = (
 				A2A0446524258F3B006BF12E /* AppDelegate.swift */,
 				A2A0446724258F3B006BF12E /* SceneDelegate.swift */,
+				A2A0448224259791006BF12E /* Model */,
+				A2A0447F24259163006BF12E /* View */,
+				A2A0447C242590DC006BF12E /* Extension */,
+				A2A0447924258F68006BF12E /* ViewModel */,
 				A2A0446924258F3B006BF12E /* ContentView.swift */,
 				A2A0446B24258F3C006BF12E /* Assets.xcassets */,
 				A2A0447024258F3C006BF12E /* LaunchScreen.storyboard */,
@@ -73,6 +85,38 @@
 				A2A0446E24258F3C006BF12E /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A2A0447924258F68006BF12E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A2A0447A24258F8E006BF12E /* GameViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A2A0447C242590DC006BF12E /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				A2A0447D242590EA006BF12E /* Color.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		A2A0447F24259163006BF12E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A2A0448024259172006BF12E /* GameView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A2A0448224259791006BF12E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A2A04483242597A3006BF12E /* GameModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,8 +190,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2A0447B24258F8E006BF12E /* GameViewModel.swift in Sources */,
 				A2A0446624258F3B006BF12E /* AppDelegate.swift in Sources */,
 				A2A0446824258F3B006BF12E /* SceneDelegate.swift in Sources */,
+				A2A0447E242590EA006BF12E /* Color.swift in Sources */,
+				A2A0448124259172006BF12E /* GameView.swift in Sources */,
+				A2A04484242597A3006BF12E /* GameModel.swift in Sources */,
 				A2A0446A24258F3B006BF12E /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
