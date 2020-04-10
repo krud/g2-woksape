@@ -31,15 +31,15 @@ class GameModel: ObservableObject {
         resumeGame()
     }
     
-    func toggleBlock(row:Int, column: Int){
-        print("Column: \(column), Row: \(row)")
-        
-        if gameBoard[column][row] == nil {
-            gameBoard[column][row]  = GameBlock(blockType: BlockType.allCases.randomElement()!)
-        } else {
-            gameBoard[column][row] = nil
-        }
-    }
+//    func toggleBlock(row:Int, column: Int){
+//        print("Column: \(column), Row: \(row)")
+//
+//        if gameBoard[column][row] == nil {
+//            gameBoard[column][row]  = GameBlock(blockType: BlockType.allCases.randomElement()!)
+//        } else {
+//            gameBoard[column][row] = nil
+//        }
+//    }
     
     func resumeGame(){
         timer?.invalidate()
@@ -104,6 +104,15 @@ class GameModel: ObservableObject {
         }
         
         return false
+    }
+    
+    func rotateTetromino(clockwise: Bool){
+        guard let currentTetromino = tetromino else { return }
+        
+        let newTetromino = currentTetromino.rotate(clockwise: clockwise)
+        if isValidTetromino(testTetromino: newTetromino){
+            tetromino = newTetromino
+        }
     }
     
     func isValidTetromino(testTetromino: Tetromino) -> Bool {

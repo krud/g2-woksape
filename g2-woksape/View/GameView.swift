@@ -1,4 +1,15 @@
 import SwiftUI
+import Combine
+
+class ViewRouter: ObservableObject {
+    let objectWillChange = PassthroughSubject<ViewRouter,Never>()
+    
+    var currentPage: String = "landing" {
+        didSet {
+            objectWillChange.send(self)
+        }
+    }
+}
 
 struct GameView: View {
     @ObservedObject var game = GameViewModel()
@@ -8,6 +19,7 @@ struct GameView: View {
             self.drawBoard(boundingRect: geometry.size)
         }
         .gesture(game.getMoveGesture())
+        .gesture(game.getRotateGesture())
     }
     
     func drawBoard(boundingRect: CGSize) -> some View {
@@ -29,9 +41,6 @@ struct GameView: View {
                     path.addRect(rect)
                 }
                 .fill(gameBoard[column][row].color)
-                .onTapGesture {
-                    self.game.toggleSqauare(row: row, column: column)
-                }
             }
         }
     }

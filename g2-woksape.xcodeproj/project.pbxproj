@@ -337,6 +337,7 @@
 				DEVELOPMENT_TEAM = YR599F2Z9Y;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "g2-woksape/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -357,6 +358,7 @@
 				DEVELOPMENT_TEAM = YR599F2Z9Y;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "g2-woksape/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

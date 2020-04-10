@@ -79,8 +79,13 @@ class GameViewModel: ObservableObject {
         }
     }
     
-    func toggleSqauare(row:Int, column: Int){
-        gameModel.toggleBlock(row: row, column: column)
+//    func toggleSqauare(row:Int, column: Int){
+//        gameModel.toggleBlock(row: row, column: column)
+//    }
+    
+    func getRotateGesture() -> some Gesture {
+        return TapGesture()
+            .onEnded({self.gameModel.rotateTetromino(clockwise: true)})
     }
     
     func getMoveGesture() -> some Gesture {
